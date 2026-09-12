@@ -6,13 +6,16 @@
 ![Data](https://img.shields.io/badge/Data-SEER%20NCI-blue)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-![Kaplan-Meier Survival Curves by Stage](outputs/figures/km_stage_final.png)
+
+<img width="2000" height="1600" alt="km_stage_final" src="https://github.com/user-attachments/assets/cefb0e45-0025-4e8f-bf49-1804d79ce646" />
+
 
 *Figure: Overall survival by stage at diagnosis. Median survival: 242 months (Localized) vs. 130 months (Regional) vs. 12 months (Distant).*
 
 ---
 
-> Can where a tumour starts — and how early it's caught — predict how long a patient survives? This project answers that question using 142,803 real patient records from the U.S. National Cancer Institute's SEER registry, applying survival analysis methods (Kaplan-Meier, Cox proportional hazards regression) to neuroendocrine tumours (NETs) — a rare, understudied cancer type sitting at the intersection of neuroscience, oncology, and rare-disease research.
+> Can where a tumour starts — and how early it's caught — predict how long a patient survives? This project answers that question using 142,803 real patient records from the U.S. National Cancer Institute's SEER registry, applying survival analysis methods (Kaplan-Meier, Cox proportional hazards regression) to neuroendocrine tumours (NETs) — a rare, understudied cancer type sitting at the intersection of neuroscience, oncology, and rare-disease research.<img width="2000" height="1600" alt="km_stage_final" src="https://github.com/user-attachments/assets/312635d0-d67e-42e8-beca-a6929a98ee72" />
+
 
 ---
 
