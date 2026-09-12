@@ -14,7 +14,7 @@
 
 ---
 
-> Can where a tumour starts — and how early it's caught — predict how long a patient survives? This project answers that question using 142,803 real patient records from the U.S. National Cancer Institute's SEER registry, applying survival analysis methods (Kaplan-Meier, Cox proportional hazards regression) to neuroendocrine tumours (NETs) — a rare, understudied cancer type sitting at the intersection of neuroscience, oncology, and rare-disease research.<img width="2000" height="1600" alt="km_stage_final" src="https://github.com/user-attachments/assets/312635d0-d67e-42e8-beca-a6929a98ee72" />
+> Can where a tumour starts — and how early it's caught — predict how long a patient survives? This project answers that question using 142,803 real patient records from the U.S. National Cancer Institute's SEER registry, applying survival analysis methods (Kaplan-Meier, Cox proportional hazards regression) to neuroendocrine tumours (NETs) — a rare, understudied cancer type sitting at the intersection of neuroscience, oncology, and rare-disease research.
 
 
 ---
@@ -74,6 +74,8 @@ Along the way, the project also deliberately demonstrates *why* proper survival-
 
 Access was obtained via SEER's public researcher registration process (no cost, no patient identifiers, standard academic-use agreement); no protected health information is included anywhere in this repository.
 
+<img width="2760" height="2480" alt="seer_nets_cohort_flow" src="https://github.com/user-attachments/assets/2924afa8-d283-4f1e-8078-ceba7748c79a" />
+
 ---
 
 ## Methods
@@ -86,17 +88,27 @@ Imported the raw export, removed the 383 records with unusable survival time, co
 ### Phase 2 — Exploratory Data Analysis (`02_eda.R`)
 Descriptive statistics, frequency tables, univariate visualizations, bivariate contingency tables with chi-square tests (Sex×Stage, Site×Stage, Race×Stage), a mosaic plot and heatmap, and an ANOVA/Pearson correlation check on Year of diagnosis.
 
+<img width="648" height="423" alt="Eda_Mosaic_plot_Site group_vs_Stage" src="https://github.com/user-attachments/assets/e2aaf893-fb1f-4345-898e-59419afb448b" />
+
 ### Phase 3 — Kaplan-Meier Survival Analysis (`03_kaplan_meier.R`)
 Built the survival object (time + censoring indicator), fit the overall Kaplan-Meier curve, then stratified curves by Stage and by Site group, each with a log-rank test for group differences.
+
+<img width="622" height="454" alt="Overall_Kaplan–Meier_survival_curve " src="https://github.com/user-attachments/assets/bc2b5a61-8b3d-4f11-a838-483af79211bf" />
 
 ### Phase 4 — Cox Proportional Hazards Modelling (`04_cox_regression.R`)
 Univariate Cox models screening each predictor individually, followed by a multivariate model combining Stage, Site, Age, Sex, Race, and Histology. Isolated Age's specific confounding contribution to Stage's effect, and directly compared the Cox model's hazard ratios against a naive logistic regression fit on the same predictors — demonstrating the practical consequence of ignoring censoring.
 
+<img width="2000" height="1800" alt="cox_forest_plot" src="https://github.com/user-attachments/assets/5f891bf3-5cfa-48de-bd38-4b26b0631449" />
+
 ### Phase 5 — Model Diagnostics (`05_diagnostics.R`)
 Tested the proportional hazards assumption via Schoenfeld residuals (`cox.zph`). Age showed a clear, interpretable violation and was addressed by stratification in the final model; Stage, Site, and Histology also showed statistically significant departures (expected given the large sample size), documented as a stated limitation rather than corrected structurally.
 
+<img width="509" height="438" alt="Schoenfeld_residuals_age" src="https://github.com/user-attachments/assets/45f7ba06-9910-43f2-9068-dac425e180ae" />
+
 ### Phase 6 — Final Visualization & Polish (`06_visualization.R`)
 Publication-style Kaplan-Meier plots for Stage and Site, a forest plot of the final model's adjusted hazard ratios, and a baseline-characteristics summary table ("Table 1") stratified by Stage.
+
+<img width="2400" height="1800" alt="km_site_final" src="https://github.com/user-attachments/assets/d889cc25-81c6-4ed9-b3b0-2b5950f7100b" />
 
 ---
 
