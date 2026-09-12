@@ -78,6 +78,16 @@ Access was obtained via SEER's public researcher registration process (no cost, 
 
 ---
 
+## How the Data Was Obtained
+
+1. Registered at seer.cancer.gov/data-software via the "SEER Incidence Data 1975–2023" request form, providing institutional affiliation (University of the Punjab) and a stated research purpose.
+2. Accepted the SEER Acknowledgment of Treatment Data Limitations and the Data Use Agreement Certification.
+3. Received SEER*Stat account credentials, then downloaded and installed SEER*Stat v9.0.43.
+4. Opened a Case Listing session and selected the Incidence – SEER Research Data, 17 Registries, Nov 2025 Sub (2000–2023) database.
+5. In the Selection tab, filtered to Histologic Type (ICD-O-3) codes 8240–8246 (the NET morphology range).
+6. In the Table tab, added the 9 variables used in this analysis to the column output.
+7. Executed the query (accepting SEER's standard warnings about staging and race-coding conventions) and exported the result as CSV, with variable names as column headers — producing the raw export.csv (142,803 rows) used as the starting point for Phase 1.
+
 ## Methods
 
 The analysis was carried out in six sequential, fully scripted phases. Each script is self-contained and reproducible from the last — running `01` through `06` in order regenerates the entire analysis from the raw export.
