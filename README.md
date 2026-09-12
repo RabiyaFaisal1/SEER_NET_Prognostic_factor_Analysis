@@ -89,7 +89,7 @@ Imported the raw export, removed the 383 records with unusable survival time, co
 Descriptive statistics, frequency tables, univariate visualizations, bivariate contingency tables with chi-square tests (Sex×Stage, Site×Stage, Race×Stage), a mosaic plot and heatmap, and an ANOVA/Pearson correlation check on Year of diagnosis.
 
 
-<img width="648" height="423" alt="Eda_Mosaic_plot_Site group_vs_Stage" src="https://github.com/user-attachments/assets/e2aaf893-fb1f-4345-898e-59419afb448b" />
+                   <img width="648" height="423" alt="Eda_Mosaic_plot_Site group_vs_Stage" src="https://github.com/user-attachments/assets/e2aaf893-fb1f-4345-898e-59419afb448b" />
 
 
 *Figure: Mosaic Plot of site vs stage in explanatory data analysis.*
@@ -99,7 +99,7 @@ Descriptive statistics, frequency tables, univariate visualizations, bivariate c
 Built the survival object (time + censoring indicator), fit the overall Kaplan-Meier curve, then stratified curves by Stage and by Site group, each with a log-rank test for group differences.
 
 
-<img width="622" height="454" alt="Overall_Kaplan–Meier_survival_curve " src="https://github.com/user-attachments/assets/bc2b5a61-8b3d-4f11-a838-483af79211bf" />
+                   <img width="622" height="454" alt="Overall_Kaplan–Meier_survival_curve " src="https://github.com/user-attachments/assets/bc2b5a61-8b3d-4f11-a838-483af79211bf" />
 
 
 *Figure: Overall Kaplan-Meier Survival Curve from phase 3.*
@@ -119,7 +119,7 @@ Univariate Cox models screening each predictor individually, followed by a multi
 Tested the proportional hazards assumption via Schoenfeld residuals (`cox.zph`). Age showed a clear, interpretable violation and was addressed by stratification in the final model; Stage, Site, and Histology also showed statistically significant departures (expected given the large sample size), documented as a stated limitation rather than corrected structurally.
 
 
-<img width="509" height="438" alt="Schoenfeld_residuals_age" src="https://github.com/user-attachments/assets/45f7ba06-9910-43f2-9068-dac425e180ae" />
+                      <img width="509" height="438" alt="Schoenfeld_residuals_age" src="https://github.com/user-attachments/assets/45f7ba06-9910-43f2-9068-dac425e180ae" />
 
 
 *Figure: Schoenfeld residuals for Flagged Variable age.*
