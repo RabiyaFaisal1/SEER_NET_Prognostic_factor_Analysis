@@ -214,7 +214,7 @@ Median survival of just 9 months (univariate HR = 9.08 vs. Appendix) — worse t
 
 ## Author
 
-**Rabiya Faisal** — Final-year BS Biotechnology student, University of the Punjab, Lahore, Pakistan, transitioning into data analytics.
+**Rabiya Faisal** — Final-year BS Biotechnology student, University of the Punjab, Lahore, Pakistan.
 
 Data obtained with academic affiliation via SEER's public researcher registration process. This project is intended as a portfolio demonstration of applied survival-analysis methods, and is structured to be extensible into undergraduate research, a conference poster, or a student journal submission.
 
